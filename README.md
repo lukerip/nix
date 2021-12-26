@@ -1,1 +1,3 @@
-# nixcfgs
+# nix
+
+My Nix Configs
