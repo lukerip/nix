@@ -1,1 +1,1 @@
-# nixfgs
+# nixcfgs
