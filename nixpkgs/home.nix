@@ -9,6 +9,7 @@
 		imports = [
 			./alacritty.nix
 			./i3.nix
+			./git.nix
 		];
 		home.packages = with pkgs; [
 			neovim
