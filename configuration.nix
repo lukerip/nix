@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nixpkgs/home.nix
     ];
@@ -27,18 +28,18 @@
   networking.useDHCP = false;
   networking.interfaces.eno2.useDHCP = true;
   networking.interfaces.wlo1.useDHCP = true;
-	
+
   services.xserver = {
     enable = true;
     dpi = 128;
-		xkbOptions = "ctrl:swapcaps";
+    xkbOptions = "ctrl:swapcaps";
 
     desktopManager = {
       xterm.enable = false;
     };
-   
+
     displayManager = {
-        defaultSession = "none+i3";
+      defaultSession = "none+i3";
     };
 
     windowManager.i3 = {
@@ -48,7 +49,7 @@
         i3status # gives you the default i3 status bar
         i3lock #default i3 screen locker
         i3blocks #if you are planning on using i3blocks over i3status
-     ];
+      ];
     };
   };
 
@@ -56,14 +57,14 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-	# System wide packages.
+  # System wide packages.
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
-		git
+    git
   ];
 
-	# Font.
+  # Font.
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "Noto" ]; })
     noto-fonts
@@ -71,11 +72,11 @@
     noto-fonts-emoji
   ];
 
-	# System wide services.
+  # System wide services.
   services.openssh.enable = true;
-	services.picom.enable = true;
-	
-	# User configs.
+  services.picom.enable = true;
+
+  # User configs.
   users.users.luke = {
     isNormalUser = true;
     home = "/home/luke";

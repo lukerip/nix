@@ -1,13 +1,13 @@
-{ config, lib, pkgs, ... }: 
+{ config, lib, pkgs, ... }:
 
 {
-	programs.git = { 
-		enable = true; 
-		
-		userName = "mutualex";
-		userEmail = "luke@luke.rip";
+  programs.git = {
+    enable = true;
 
-		# ignore home and vim swap files.
-		ignores = [ "*~" "*.swp" ];
-	};
+    userName = "mutualex";
+    userEmail = "luke@luke.rip";
+
+    # ignore home and vim swap files.
+    ignores = [ "*~" "*.swp" ];
+  };
 }
