@@ -10,6 +10,7 @@
       ./alacritty.nix
       ./i3.nix
       ./git.nix
+      ./fish.nix
     ];
     home.packages = with pkgs; [
       neovim
