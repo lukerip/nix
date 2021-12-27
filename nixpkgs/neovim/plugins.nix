@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 let
+  # Plugins that are not already packaged. (i.e. if 
+  # $ nix search nixpkgs.vimPlugins | rg <your-plugin> returns nothing.
+  # See: https://git.io/JyW1b
   copilot = pkgs.vimUtils.buildVimPlugin {
     name = "copilot";
     src = pkgs.fetchFromGitHub {
