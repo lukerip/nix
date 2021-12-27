@@ -11,11 +11,21 @@
       ./i3.nix
       ./git.nix
       ./fish.nix
+      ./python.nix
+      ./bat.nix
+
+      ./neovim/neovim.nix
     ];
     home.packages = with pkgs; [
-      neovim
+      # Shell
+      ripgrep
       fish
+      fzf
+
+      # Desktop apps.
       firefox
+
+      nodejs
     ];
   };
 }
