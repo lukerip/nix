@@ -6,6 +6,7 @@
 
     \" General.
     set number
+    set relativenumber
       
     \" Indentation.
     set smartindent
