@@ -2,11 +2,12 @@
 
 {
   programs.neovim.extraConfig = ''
-    let mapleader = ","
 
     \" General.
+    let mapleader = ","
     set number
     set relativenumber
+    filetype plugin indent on
       
     \" Indentation.
     set smartindent
@@ -14,8 +15,12 @@
     set expandtab
     set shiftwidth=2
 
-    \" Colors
+    \" Visual.
     colorscheme gruvbox
     set background=dark
+    syntax enable
+
+    \" Rust.
+    let g:rustfmt_autosave = 1
   '';
 }

@@ -15,15 +15,34 @@ in
   programs.neovim.plugins = with pkgs.vimPlugins; [
     vim-nix
     fzf-vim
-    {
-      plugin = The_NERD_Commenter;
-      config = "let NERDSpaceDelims=1";
-    }
+    rust-vim
     coc-nvim
     coc-rust-analyzer
     coc-rls
     coc-python
     gruvbox
     copilot
+    # Autopairs. 
+    {
+      plugin = auto-pairs;
+      config = "let g:AutoPairsShortcutFastWrap = '<C-i>'";
+    }
+    # Nerdcommenter
+    {
+      plugin = The_NERD_Commenter;
+      config = "let NERDSpaceDelims=1";
+    }
+    # Lightline.
+    {
+      plugin = lightline-vim;
+      config = ''
+              set laststatus=2
+        set noshowmode
+        let g:lightline = {
+              \ 'colorscheme': 'gruvbox',
+              \ }
+      '';
+
+    }
   ];
 }
