@@ -36,7 +36,7 @@ in
     {
       plugin = lightline-vim;
       config = ''
-              set laststatus=2
+        set laststatus=2
         set noshowmode
         let g:lightline = {
               \ 'colorscheme': 'gruvbox',
